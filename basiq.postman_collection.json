@@ -1,0 +1,45 @@
+{
+  "info": {
+    "name": "Basiq API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:8081"
+    }
+  ],
+  "item": [
+    {
+      "name": "1. Create User",
+      "request": {
+        "method": "POST",
+        "url": "{{base_url}}/users",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"test@example.com\"\n}"
+        }
+      }
+    },
+    {
+      "name": "2. Create Connection",
+      "request": {
+        "method": "POST",
+        "url": "{{base_url}}/connections"
+      }
+    },
+    {
+      "name": "3. Get Averages",
+      "request": {
+        "method": "GET",
+        "url": "{{base_url}}/averages"
+      }
+    }
+  ]
+}
