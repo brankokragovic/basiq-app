@@ -7,7 +7,7 @@ api: redis
 	go run ./cmd/api
 
 build:
-	docker compose build
+	docker compose up --build
 
 clean:
 	docker compose down -v
